@@ -1,0 +1,62 @@
+{
+	"name": "Anaconda (Python 3)",
+	"build": { 
+		"context": "..",
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "python --version",
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.wordWrap": "on",
+				"editor.linkedEditing": true,
+				"editor.lineHeight": 33,
+				"editor.tabSize": 2,
+				"editor.formatOnSave": true,
+				"editor.formatOnPaste": true,
+				"editor.cursorBlinking": "expand",
+				"editor.guides.bracketPairs": true,
+				"editor.guides.highlightActiveIndentation": true,
+				"editor.guides.bracketPairsHorizontal": "active",
+				"editor.stickyScroll.enabled": true,
+				"workbench.colorTheme": "Coder Coder Dark Theme",
+				"workbench.sideBar.location": "right",
+				"html.autoClosingTags": true,
+				"javascript.autoClosingTags": true,
+				"javascript.suggest.autoImports": true,
+				"javascript.updateImportsOnFileMove.enabled": "always",
+				"typescript.autoClosingTags": true,
+				"typescript.suggest.autoImports": true,
+				"typescript.updateImportsOnFileMove.enabled": "always",
+				"editor.codeActionsOnSave": {
+				"source.organizeImports": "explicit"
+				},
+				"git.autofetch": true,
+				"files.autoSave": "afterDelay",
+				"files.trimTrailingWhitespace": true,
+				"[markdown]": {
+				"files.trimTrailingWhitespace": false
+				},
+				"extensions.ignoreRecommendations": false
+			},
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-python.python",
+				"CoderCoder.codercoder-dark-theme",
+				"ms-toolsai.jupyter"
+			]
+		}
+	},
+	"remoteUser": "dubu",
+	"hostRequirements": {
+		"cpus": 4,
+		"memory": "8gb",
+		"storage": "32gb"
+ 	}
+}
